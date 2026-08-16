@@ -13,26 +13,25 @@ import net.minecraft.util.Identifier;
 
 @SuppressWarnings("unused")
 public class ItemGroups {
-//    public static final ItemGroup PROGRESSIVE = register(
-//        "progressive", Items.PROGRESSIVE_ITEMGROUP_ICON,
-//        Items.EXAMPLE
-//    );
+    public static final ItemGroup PROGRESSIVE = register(
+        "progressive", Items.PROGRESSIVE_ITEMGROUP_ICON,
+        Blocks.EXAMPLE.asItem()
+    );
 
     @SafeVarargs
-    public static <GenericItem extends Item>
-    ItemGroup register(String name, GenericItem icon, GenericItem... items) {
+    public static <T extends Item>
+    ItemGroup register(String name, T icon, T... items) {
         Identifier identifier = Progressive.id(name);
         ItemGroup itemGroup = FabricItemGroup.builder()
             .icon(() -> new ItemStack(icon))
-            .displayName(TranslationHelper.itemGroup(identifier.getPath()))
+            .displayName(TranslationHelper.itemGroup(name))
             .build();
 
         Registry.register(Registries.ITEM_GROUP, identifier, itemGroup);
 
         ItemGroupEvents.modifyEntriesEvent(RegistryKey.of(Registries.ITEM_GROUP.getKey(), identifier)).register(groupEntries -> {
-            for (GenericItem item : items) {
+            for (T item : items)
                 groupEntries.add(item);
-            }
         });
 
         return itemGroup;
