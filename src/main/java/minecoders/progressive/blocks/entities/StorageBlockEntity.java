@@ -8,8 +8,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.storage.ReadView;
+import net.minecraft.storage.WriteView;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 
@@ -32,13 +32,15 @@ public abstract class StorageBlockEntity extends BlockEntity implements Progress
         return Inventory.canPlayerUse(this, player);
     }
 
-//    protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
-//        super.writeNbt(nbt, registryLookup);
-//        Inventories.writeNbt(nbt, inventory, registryLookup);
-//    }
-//
-//    protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
-//        super.readNbt(nbt, registryLookup);
-//        Inventories.readNbt(nbt, inventory, registryLookup);
-//    }
+    @Override
+    protected void writeData(WriteView output) {
+        super.writeData(output);
+        Inventories.writeData(output, inventory);
+    }
+
+    @Override
+    protected void readData(ReadView input) {
+        super.readData(input);
+        Inventories.readData(input, inventory);
+    }
 }
