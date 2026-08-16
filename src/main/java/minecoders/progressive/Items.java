@@ -1,27 +1,24 @@
 package minecoders.progressive;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
+import minecoders.progressive.util.helper.RegistryHelper;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+
+import java.util.function.Function;
 
 public class Items {
-//    public static final BlockItem EXAMPLE = registerBlock("example", Blocks.EXAMPLE);
-    public static final Item PROGRESSIVE_ITEMGROUP_ICON = register("progressive_itemgroup_icon", new Item(new Item.Settings()));
+    public static final Item PROGRESSIVE_ITEMGROUP_ICON = register("progressive_itemgroup_icon", Item::new, new Item.Settings());
 
     public static void initialize() {
         Progressive.LOGGER.debug("Registering items...");
     }
 
-    public static BlockItem registerBlock(String name, Block block) {
-        final BlockItem blockItem = new BlockItem(block, new Item.Settings());
-        return register(name, blockItem);
-    }
-
-    public static <GenericItem extends Item>
-    GenericItem register(String name, GenericItem item) {
-        Registry.register(Registries.ITEM, Progressive.id(name), item);
-        return item;
+    public static <T extends Item>
+    T register(String name, Function<Item.Settings, T> itemFactory, Item.Settings settings) {
+        final RegistryKey<Item> key = RegistryHelper.getKeyOfItem(name);
+        final T item = itemFactory.apply(settings.registryKey(key));
+        return Registry.register(Registries.ITEM, key, item);
     }
 }
