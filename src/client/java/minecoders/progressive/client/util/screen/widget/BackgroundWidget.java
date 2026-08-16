@@ -3,6 +3,7 @@ package minecoders.progressive.client.util.screen.widget;
 import minecoders.progressive.Progressive;
 import minecoders.progressive.client.util.screen.BoundDimensions;
 import minecoders.progressive.client.util.screen.Dimensions;
+import net.minecraft.client.gl.RenderPipelines;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.narration.NarrationMessageBuilder;
@@ -32,6 +33,7 @@ public class BackgroundWidget extends ClickableWidget {
     @Override
     protected void renderWidget(DrawContext context, int mouseX, int mouseY, float delta) {
         context.drawGuiTexture(
+            RenderPipelines.GUI_TEXTURED,
             backgroundTextureId,
             getX(),
             getY(),
