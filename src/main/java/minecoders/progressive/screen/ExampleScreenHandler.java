@@ -92,7 +92,6 @@ public class ExampleScreenHandler extends ScreenHandler {
 
     @Override
     public boolean canUse(PlayerEntity player) {
-        return false;
-//        return canUse(context, player, Blocks.EXAMPLE);
+        return canUse(context, player, Blocks.EXAMPLE);
     }
 }
