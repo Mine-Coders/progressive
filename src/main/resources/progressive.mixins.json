@@ -1,0 +1,16 @@
+{
+    "required": true,
+    "package": "minecoders.progressive.mixin",
+    "compatibilityLevel": "JAVA_21",
+    "mixins": [
+        "ExampleMixin",
+        "addition.PlayerMovementMixin",
+        "addition.ServerPlayerInteractionManagerMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    },
+    "overwrites": {
+        "requireAnnotations": true
+	}
+}

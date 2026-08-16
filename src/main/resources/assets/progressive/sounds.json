@@ -1,0 +1,8 @@
+{
+	"example": {
+		"subtitle": "sound.progressive.example",
+		"sounds": [
+			"progressive:example"
+		]
+	}
+}

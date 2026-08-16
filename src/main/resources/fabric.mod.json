@@ -1,0 +1,58 @@
+{
+	"schemaVersion": 1,
+	"id": "progressive",
+	"version": "${version}",
+	"name": "Progressive",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/progressive/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"minecoders.progressive.Progressive"
+		],
+		"client": [
+			"minecoders.progressive.client.ProgressiveClient"
+		],
+		"fabric-datagen": [
+			"minecoders.progressive.client.ProgressiveDataGenerator"
+		],
+		"modmenu": [
+			"minecoders.progressive.client.integration.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"progressive.mixins.json",
+		{
+			"config": "progressive.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"accessWidener": "nano.accesswidener",
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"modmenu": "*"
+	},
+	"recommends": {
+		"midnightlib": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {},
+			"badges": [],
+			"update_checker": false
+		}
+	}
+}

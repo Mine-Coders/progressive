@@ -1,0 +1,24 @@
+{
+    "key.category.progressive": "Progressive",
+    "key.progressive.debug1": "Example",
+
+    "screen.progressive.example.title": "Example",
+
+    "screen.progressive.nomidnightlib.button.exit.text": "Exit",
+    "screen.progressive.nomidnightlib.label.help.text": "Progressive's configuration screen requires midnight lib to be installed",
+
+    "sound.progressive.example": "Example",
+
+    "itemGroup.progressive.progressive": "Progressive",
+
+    "block.progressive.example": "Example",
+
+    "item.progressive.progressive_itemgroup_icon": "Progressive Item Group Icon",
+
+    "progressive.midnightconfig.title": "Progressive",
+
+    "progressive.midnightconfig.category.example": "Example",
+    
+    
+    "progressive.midnightconfig.example": "Example"
+}

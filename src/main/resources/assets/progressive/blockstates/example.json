@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "progressive:block/example" }
+    }
+}
