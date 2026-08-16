@@ -54,7 +54,7 @@ public class Progressive implements ModInitializer {
 		Components.initialize();
 		Blocks.initialize();
 		BlockEntities.initialize();
-//		Items.initialize();
+		Items.initialize();
 		ItemGroups.initialize();
 		ScreenHandlers.initialize();
 		LootFunctions.initialize();
