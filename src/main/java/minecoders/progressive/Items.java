@@ -7,7 +7,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 
 public class Items {
-    public static final BlockItem EXAMPLE = registerBlock("example", Blocks.EXAMPLE);
+//    public static final BlockItem EXAMPLE = registerBlock("example", Blocks.EXAMPLE);
     public static final Item PROGRESSIVE_ITEMGROUP_ICON = register("progressive_itemgroup_icon", new Item(new Item.Settings()));
 
     public static void initialize() {

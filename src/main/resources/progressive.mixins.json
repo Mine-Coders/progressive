@@ -3,7 +3,6 @@
     "package": "minecoders.progressive.mixin",
     "compatibilityLevel": "JAVA_21",
     "mixins": [
-        "ExampleMixin",
         "addition.PlayerMovementMixin",
         "addition.ServerPlayerInteractionManagerMixin"
     ],

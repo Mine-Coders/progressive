@@ -35,7 +35,7 @@
 			"environment": "client"
 		}
 	],
-	"accessWidener": "nano.accesswidener",
+	"accessWidener": "progressive.accesswidener",
 	"depends": {
 		"fabricloader": ">=0.19.3",
 		"minecraft": "~1.21.11",

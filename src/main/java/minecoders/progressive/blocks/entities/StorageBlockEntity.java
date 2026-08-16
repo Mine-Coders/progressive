@@ -32,13 +32,13 @@ public abstract class StorageBlockEntity extends BlockEntity implements Progress
         return Inventory.canPlayerUse(this, player);
     }
 
-    protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
-        super.writeNbt(nbt, registryLookup);
-        Inventories.writeNbt(nbt, inventory, registryLookup);
-    }
-
-    protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
-        super.readNbt(nbt, registryLookup);
-        Inventories.readNbt(nbt, inventory, registryLookup);
-    }
+//    protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
+//        super.writeNbt(nbt, registryLookup);
+//        Inventories.writeNbt(nbt, inventory, registryLookup);
+//    }
+//
+//    protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
+//        super.readNbt(nbt, registryLookup);
+//        Inventories.readNbt(nbt, inventory, registryLookup);
+//    }
 }

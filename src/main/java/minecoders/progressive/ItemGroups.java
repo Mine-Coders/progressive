@@ -13,10 +13,10 @@ import net.minecraft.util.Identifier;
 
 @SuppressWarnings("unused")
 public class ItemGroups {
-    public static final ItemGroup PROGRESSIVE = register(
-        "progressive", Items.PROGRESSIVE_ITEMGROUP_ICON,
-        Items.EXAMPLE
-    );
+//    public static final ItemGroup PROGRESSIVE = register(
+//        "progressive", Items.PROGRESSIVE_ITEMGROUP_ICON,
+//        Items.EXAMPLE
+//    );
 
     @SafeVarargs
     public static <GenericItem extends Item>

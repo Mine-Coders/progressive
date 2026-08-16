@@ -1,7 +1,7 @@
 # Progressive
 
 ## Useful Links
-- [Fabric Docs](https://docs.fabricmc.net/develop/)
+- [Fabric Docs](https://docs.fabricmc.net/1.21.11/develop/)
 - [Mappings](https://mappings.dev/1.21.11/index.html)
 
 ## Importing
