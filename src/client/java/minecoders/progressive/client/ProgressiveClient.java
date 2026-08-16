@@ -1,5 +1,6 @@
 package minecoders.progressive.client;
 
+import minecoders.progressive.Progressive;
 import minecoders.progressive.ScreenHandlers;
 import minecoders.progressive.SharedInteractions;
 import minecoders.progressive.api.client.ProgressiveClientIntegration;
@@ -46,7 +47,7 @@ public class ProgressiveClient implements ClientModInitializer {
 				"key.progressive.debug1",
 				InputUtil.Type.KEYSYM,
 				GLFW.GLFW_KEY_U,
-				"key.category.progressive"
+				new KeyBinding.Category(Progressive.id("progressive"))
 			)
 		);
 

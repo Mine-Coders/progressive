@@ -4,6 +4,7 @@ import minecoders.progressive.Progressive;
 import minecoders.progressive.client.util.screen.BoundDimensions;
 import minecoders.progressive.client.util.screen.Dimensions;
 import net.minecraft.client.gl.RenderPipelines;
+import net.minecraft.client.gui.Click;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.narration.NarrationMessageBuilder;
@@ -46,17 +47,17 @@ public class BackgroundWidget extends ClickableWidget {
     protected void appendClickableNarrations(NarrationMessageBuilder builder) {}
 
     @Override
-    public boolean mouseClicked(double mouseX, double mouseY, int button) {
+    public boolean mouseClicked(Click click, boolean doubled) {
         return false;
     }
 
     @Override
-    public boolean mouseReleased(double mouseX, double mouseY, int button) {
+    public boolean mouseReleased(Click click) {
         return false;
     }
 
     @Override
-    public boolean mouseDragged(double mouseX, double mouseY, int button, double deltaX, double deltaY) {
+    public boolean mouseDragged(Click click, double offsetX, double offsetY) {
         return false;
     }
 
